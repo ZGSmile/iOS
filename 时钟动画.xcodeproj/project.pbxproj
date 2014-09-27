@@ -23,6 +23,7 @@
 		6212491B19D6AA6700DA8AAF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6212491519D6AA6700DA8AAF /* AppDelegate.m */; };
 		6212491C19D6AA6700DA8AAF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6212491619D6AA6700DA8AAF /* main.m */; };
 		6212491D19D6AA6700DA8AAF /* 雪花.png in Resources */ = {isa = PBXBuildFile; fileRef = 6212491919D6AA6700DA8AAF /* 雪花.png */; };
+		6212492419D6AF8A00DA8AAF /* view.m in Sources */ = {isa = PBXBuildFile; fileRef = 6212492319D6AF8A00DA8AAF /* view.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		6212491619D6AA6700DA8AAF /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6212491719D6AA6700DA8AAF /* 时钟动画-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "时钟动画-Prefix.pch"; sourceTree = "<group>"; };
 		6212491919D6AA6700DA8AAF /* 雪花.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "雪花.png"; sourceTree = "<group>"; };
+		6212492219D6AF8A00DA8AAF /* view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = view.h; sourceTree = "<group>"; };
+		6212492319D6AF8A00DA8AAF /* view.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = view.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +215,8 @@
 			isa = PBXGroup;
 			children = (
 				6212492119D6AE9900DA8AAF /* Controller */,
+				6212492219D6AF8A00DA8AAF /* view.h */,
+				6212492319D6AF8A00DA8AAF /* view.m */,
 			);
 			path = Squ;
 			sourceTree = "<group>";
@@ -321,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6212492419D6AF8A00DA8AAF /* view.m in Sources */,
 				6212491B19D6AA6700DA8AAF /* AppDelegate.m in Sources */,
 				6212491C19D6AA6700DA8AAF /* main.m in Sources */,
 				6212491A19D6AA6700DA8AAF /* ViewController.m in Sources */,
