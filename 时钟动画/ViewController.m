@@ -42,11 +42,20 @@ static long steps;
     
 //    [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
     
+    UIButton *btn = [[UIButton alloc]init];
+    btn.frame = CGRectMake(100, 100, 60, 60);
+    [btn setTitle:@"按钮" forState:UIControlStateNormal];
+    [btn setBackgroundColor:[UIColor orangeColor]];
+    [btn addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpOutside];
+    [self.view addSubview:btn];
+    
+}
+- (void)click
+{
     _timer = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateTimer)];
     // 将时钟添加到主运行循环，才能够在每次屏幕刷新时工作
     [_timer addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
 }
-
 #pragma mark 时钟触发方法
 - (void)updateTimer
 {
