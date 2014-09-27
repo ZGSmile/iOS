@@ -74,6 +74,33 @@ static long steps;
     }
 }
 
+#pragma mark 获取随机颜色
+- (UIColor *)getRandomColor
+{
+    CGFloat hue = arc4random() % 256 /256.0;
+    CGFloat saturation = arc4random() % 256 / 256.0;
+    CGFloat brightness = arc4random() % 256 / 256.0 + 0.5;
+    return [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
+}
+
+#pragma mark 改变雪花着色
+- (UIImage *)imageWithAdjustColor:(UIImage *)inputImage
+{
+    UIGraphicsBeginImageContextWithOptions(inputImage.size, NO, inputImage.scale); //不透明，不缩放
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextTranslateCTM(context, 0, inputImage.size.height);
+    CGContextScaleCTM(context, 1.0, -1.0);
+    CGContextSetBlendMode(context, kCGBlendModeNormal);
+    CGRect rect = CGRectMake(0, 0, inputImage.size.width, inputImage.size.height);
+    CGContextClipToMask(context, rect, inputImage.CGImage);
+    UIColor *myColor = [self getRandomColor];
+    [myColor setFill];
+    CGContextFillRect(context, rect);
+    UIImage *outputImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return outputImage;
+}
+
 #pragma mark 绘制雪花
 - (void)drawSnow
 {
@@ -86,7 +113,7 @@ static long steps;
      */
     // 雪花的图像
     UIImage *image = [UIImage imageNamed:@"雪花"];
-    
+    image = [self imageWithAdjustColor:image];
     // 雪花的图像视图
     UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
     CGFloat x = arc4random_uniform(320);
@@ -99,7 +126,6 @@ static long steps;
     imageView.center = CGPointMake(x, y);
     
     [self.view addSubview:imageView];
-    
     // 块动画让雪花飘落
     float dura = 10.0f; //雪花运动间隔
     int downheight = 20; //雪花每次下降垂直距离为imageView.bounds.size.height / downheight
@@ -109,6 +135,10 @@ static long steps;
         
         imageView.center = CGPointMake(x, y);
         imageView.transform = CGAffineTransformRotate(imageView.transform, M_PI);
+        
+        CGFloat scaleX = arc4random_uniform(100) / 100.0f + 0.4;
+        CGFloat scaleY = arc4random_uniform(100) / 100.0f + 0.4;
+        imageView.transform = CGAffineTransformScale(imageView.transform, scaleX, scaleY); //对雪花进行随机缩放，模仿雪花消融，缩放比例为宽度，长度分别为scaleX, scaleY
         imageView.alpha = 0.5f;
     } completion:^(BOOL finished) {
         // 从根视图中删除
