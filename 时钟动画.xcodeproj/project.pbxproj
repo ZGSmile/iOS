@@ -21,6 +21,8 @@
 		18F7DB801872B01B00BEAD7D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F7DB621872B01B00BEAD7D /* UIKit.framework */; };
 		18F7DB881872B01B00BEAD7D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18F7DB861872B01B00BEAD7D /* InfoPlist.strings */; };
 		18F7DB8A1872B01B00BEAD7D /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F7DB891872B01B00BEAD7D /* ____Tests.m */; };
+		18F7DB941872B24B00BEAD7D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F7DB931872B24B00BEAD7D /* QuartzCore.framework */; };
+		18F7DB961872B55700BEAD7D /* 雪花.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F7DB951872B55700BEAD7D /* 雪花.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		18F7DB851872B01B00BEAD7D /* 时钟动画Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "时钟动画Tests-Info.plist"; sourceTree = "<group>"; };
 		18F7DB871872B01B00BEAD7D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		18F7DB891872B01B00BEAD7D /* ____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____Tests.m"; sourceTree = "<group>"; };
+		18F7DB931872B24B00BEAD7D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		18F7DB951872B55700BEAD7D /* 雪花.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "雪花.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18F7DB941872B24B00BEAD7D /* QuartzCore.framework in Frameworks */,
 				18F7DB611872B01B00BEAD7D /* CoreGraphics.framework in Frameworks */,
 				18F7DB631872B01B00BEAD7D /* UIKit.framework in Frameworks */,
 				18F7DB5F1872B01B00BEAD7D /* Foundation.framework in Frameworks */,
@@ -101,6 +106,7 @@
 		18F7DB5D1872B01B00BEAD7D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18F7DB931872B24B00BEAD7D /* QuartzCore.framework */,
 				18F7DB5E1872B01B00BEAD7D /* Foundation.framework */,
 				18F7DB601872B01B00BEAD7D /* CoreGraphics.framework */,
 				18F7DB621872B01B00BEAD7D /* UIKit.framework */,
@@ -126,6 +132,7 @@
 		18F7DB651872B01B00BEAD7D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				18F7DB951872B55700BEAD7D /* 雪花.png */,
 				18F7DB661872B01B00BEAD7D /* 时钟动画-Info.plist */,
 				18F7DB671872B01B00BEAD7D /* InfoPlist.strings */,
 				18F7DB6A1872B01B00BEAD7D /* main.m */,
@@ -228,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18F7DB961872B55700BEAD7D /* 雪花.png in Resources */,
 				18F7DB771872B01B00BEAD7D /* Images.xcassets in Resources */,
 				18F7DB691872B01B00BEAD7D /* InfoPlist.strings in Resources */,
 				18F7DB721872B01B00BEAD7D /* Main.storyboard in Resources */,
