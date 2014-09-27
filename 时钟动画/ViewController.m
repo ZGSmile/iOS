@@ -14,6 +14,7 @@ static long steps;
 @interface ViewController ()
 {
     CADisplayLink   *_timer;
+    NSInteger snowLevel;
 }
 
 @end
@@ -39,23 +40,58 @@ static long steps;
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor darkGrayColor];
-    
+    snowLevel = 1;
 //    [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
     
-    UIButton *btn = [[UIButton alloc]init];
-    btn.frame = CGRectMake(10, 100, 60, 60);
-    [btn setTitle:@"开始" forState:UIControlStateNormal];
-    [btn setBackgroundColor:[UIColor blueColor]];
-    [btn addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn];
+    UIButton *heavySnowBt = [[UIButton alloc]init];
+    heavySnowBt.frame = CGRectMake(10, 100, 60, 25);
+    [heavySnowBt setTitle:@"大雪" forState:UIControlStateNormal];
+    [heavySnowBt setBackgroundColor:[UIColor blueColor]];
+    heavySnowBt.tag = 1;
+    [heavySnowBt addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:heavySnowBt];
     
+    UIButton *moderateSnowBt = [[UIButton alloc] init]; //增加下雪的种类
+    moderateSnowBt.frame = CGRectMake(10, 130, 60, 25);
+    [moderateSnowBt setTitle:@"中雪" forState:UIControlStateNormal];
+    [moderateSnowBt setBackgroundColor:[UIColor blueColor]];
+    moderateSnowBt.tag = 2;
+    [moderateSnowBt addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:moderateSnowBt];
+    
+    UIButton *smallSnowBt = [[UIButton alloc] init];
+    smallSnowBt.frame = CGRectMake(10, 160, 60, 25);
+    [smallSnowBt setTitle:@"小雪" forState:UIControlStateNormal];
+    [smallSnowBt setBackgroundColor:[UIColor blueColor]];
+    smallSnowBt.tag = 3;
+    [smallSnowBt addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:smallSnowBt];
+    
+    UIButton *stopSnowBt = [[UIButton alloc] init];
+    stopSnowBt.frame = CGRectMake(10, 190, 60, 25);
+    [stopSnowBt setTitle:@"停止" forState:UIControlStateNormal];
+    [stopSnowBt setBackgroundColor:[UIColor redColor]];
+    [stopSnowBt addTarget:self action:@selector(stopSnow) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:stopSnowBt];
 }
-- (void)click
+
+#pragma mark 停止下雪
+- (void)stopSnow
 {
+    NSLog(@"stop");
+    _timer.paused = TRUE;
+    [[NSRunLoop mainRunLoop] runUntilDate:[NSDate date]];
+}
+
+
+- (void)click:(UIButton *) button
+{
+    snowLevel = button.tag; //set the snow level
     _timer = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateTimer)];
     // 将时钟添加到主运行循环，才能够在每次屏幕刷新时工作
     [_timer addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
 }
+
 #pragma mark 时钟触发方法
 - (void)updateTimer
 {
@@ -64,8 +100,8 @@ static long steps;
     steps++;
     
 //    // 每隔0.5秒执行一次Log
-    int interval; //每秒落下的雪花个数为60/interval
-    interval = (arc4random() % 60) + 1;
+   // NSInteger interval; //每秒落下的雪花个数为60/interval
+    NSInteger interval = (arc4random() % (snowLevel*10)) + (snowLevel - 1)*10 + 1;
     if (steps % (interval) == 0) {
 //modify by hengyizhang, 2014/9/27，可以使每秒落下的雪花数不固定
 //    if (steps % (10) == 0) {
@@ -79,7 +115,7 @@ static long steps;
 {
     CGFloat hue = arc4random() % 256 /256.0;
     CGFloat saturation = arc4random() % 256 / 256.0;
-    CGFloat brightness = arc4random() % 256 / 256.0 + 0.5;
+    CGFloat brightness = arc4random() % 256 / 256.0 + 0.5; //使雪花不至于为黑色
     return [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
 }
 
