@@ -63,8 +63,12 @@ static long steps;
     // 每刷新60次，当做1秒
     steps++;
     
-    // 每隔0.5秒执行一次Log
-    if (steps % (10) == 0) {
+//    // 每隔0.5秒执行一次Log
+    int interval; //每秒落下的雪花个数为60/interval
+    interval = (arc4random() % 60) + 1;
+    if (steps % (interval) == 0) {
+//modify by hengyizhang, 2014/9/27，可以使每秒落下的雪花数不固定
+//    if (steps % (10) == 0) {
         NSLog(@"come here");
         [self drawSnow];
     }
@@ -97,9 +101,11 @@ static long steps;
     [self.view addSubview:imageView];
     
     // 块动画让雪花飘落
-    [UIView animateWithDuration:5.0f animations:^{
+    float dura = 10.0f; //雪花运动间隔
+    int downheight = 20; //雪花每次下降垂直距离为imageView.bounds.size.height / downheight
+    [UIView animateWithDuration:dura animations:^{
         CGFloat x = arc4random_uniform(320);
-        CGFloat y = self.view.bounds.size.height + imageView.bounds.size.height / 2;
+        CGFloat y = self.view.bounds.size.height + imageView.bounds.size.height / downheight;
         
         imageView.center = CGPointMake(x, y);
         imageView.transform = CGAffineTransformRotate(imageView.transform, M_PI);
