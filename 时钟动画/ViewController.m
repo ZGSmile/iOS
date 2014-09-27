@@ -43,10 +43,10 @@ static long steps;
 //    [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
     
     UIButton *btn = [[UIButton alloc]init];
-    btn.frame = CGRectMake(100, 100, 60, 60);
+    btn.frame = CGRectMake(10, 100, 60, 60);
     [btn setTitle:@"按钮" forState:UIControlStateNormal];
     [btn setBackgroundColor:[UIColor orangeColor]];
-    [btn addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpOutside];
+    [btn addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
     
 }
