@@ -11,10 +11,7 @@
 		18F7DB611872B01B00BEAD7D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F7DB601872B01B00BEAD7D /* CoreGraphics.framework */; };
 		18F7DB631872B01B00BEAD7D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F7DB621872B01B00BEAD7D /* UIKit.framework */; };
 		18F7DB691872B01B00BEAD7D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18F7DB671872B01B00BEAD7D /* InfoPlist.strings */; };
-		18F7DB6B1872B01B00BEAD7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F7DB6A1872B01B00BEAD7D /* main.m */; };
-		18F7DB6F1872B01B00BEAD7D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F7DB6E1872B01B00BEAD7D /* AppDelegate.m */; };
 		18F7DB721872B01B00BEAD7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F7DB701872B01B00BEAD7D /* Main.storyboard */; };
-		18F7DB751872B01B00BEAD7D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F7DB741872B01B00BEAD7D /* ViewController.m */; };
 		18F7DB771872B01B00BEAD7D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F7DB761872B01B00BEAD7D /* Images.xcassets */; };
 		18F7DB7E1872B01B00BEAD7D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F7DB7D1872B01B00BEAD7D /* XCTest.framework */; };
 		18F7DB7F1872B01B00BEAD7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F7DB5E1872B01B00BEAD7D /* Foundation.framework */; };
@@ -22,7 +19,10 @@
 		18F7DB881872B01B00BEAD7D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18F7DB861872B01B00BEAD7D /* InfoPlist.strings */; };
 		18F7DB8A1872B01B00BEAD7D /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F7DB891872B01B00BEAD7D /* ____Tests.m */; };
 		18F7DB941872B24B00BEAD7D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F7DB931872B24B00BEAD7D /* QuartzCore.framework */; };
-		18F7DB961872B55700BEAD7D /* 雪花.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F7DB951872B55700BEAD7D /* 雪花.png */; };
+		6212491A19D6AA6700DA8AAF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6212491219D6AA6700DA8AAF /* ViewController.m */; };
+		6212491B19D6AA6700DA8AAF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6212491519D6AA6700DA8AAF /* AppDelegate.m */; };
+		6212491C19D6AA6700DA8AAF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6212491619D6AA6700DA8AAF /* main.m */; };
+		6212491D19D6AA6700DA8AAF /* 雪花.png in Resources */ = {isa = PBXBuildFile; fileRef = 6212491919D6AA6700DA8AAF /* 雪花.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,13 +42,7 @@
 		18F7DB621872B01B00BEAD7D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		18F7DB661872B01B00BEAD7D /* 时钟动画-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "时钟动画-Info.plist"; sourceTree = "<group>"; };
 		18F7DB681872B01B00BEAD7D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		18F7DB6A1872B01B00BEAD7D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		18F7DB6C1872B01B00BEAD7D /* 时钟动画-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "时钟动画-Prefix.pch"; sourceTree = "<group>"; };
-		18F7DB6D1872B01B00BEAD7D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		18F7DB6E1872B01B00BEAD7D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		18F7DB711872B01B00BEAD7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		18F7DB731872B01B00BEAD7D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		18F7DB741872B01B00BEAD7D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		18F7DB761872B01B00BEAD7D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		18F7DB7C1872B01B00BEAD7D /* 时钟动画Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "时钟动画Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F7DB7D1872B01B00BEAD7D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -56,7 +50,13 @@
 		18F7DB871872B01B00BEAD7D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		18F7DB891872B01B00BEAD7D /* ____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____Tests.m"; sourceTree = "<group>"; };
 		18F7DB931872B24B00BEAD7D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		18F7DB951872B55700BEAD7D /* 雪花.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "雪花.png"; sourceTree = "<group>"; };
+		6212491119D6AA6700DA8AAF /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6212491219D6AA6700DA8AAF /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6212491419D6AA6700DA8AAF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6212491519D6AA6700DA8AAF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6212491619D6AA6700DA8AAF /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6212491719D6AA6700DA8AAF /* 时钟动画-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "时钟动画-Prefix.pch"; sourceTree = "<group>"; };
+		6212491919D6AA6700DA8AAF /* 雪花.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "雪花.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,11 +118,8 @@
 		18F7DB641872B01B00BEAD7D /* 时钟动画 */ = {
 			isa = PBXGroup;
 			children = (
-				18F7DB6D1872B01B00BEAD7D /* AppDelegate.h */,
-				18F7DB6E1872B01B00BEAD7D /* AppDelegate.m */,
+				6212490F19D6AA6700DA8AAF /* Classes */,
 				18F7DB701872B01B00BEAD7D /* Main.storyboard */,
-				18F7DB731872B01B00BEAD7D /* ViewController.h */,
-				18F7DB741872B01B00BEAD7D /* ViewController.m */,
 				18F7DB761872B01B00BEAD7D /* Images.xcassets */,
 				18F7DB651872B01B00BEAD7D /* Supporting Files */,
 			);
@@ -132,11 +129,8 @@
 		18F7DB651872B01B00BEAD7D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				18F7DB951872B55700BEAD7D /* 雪花.png */,
 				18F7DB661872B01B00BEAD7D /* 时钟动画-Info.plist */,
 				18F7DB671872B01B00BEAD7D /* InfoPlist.strings */,
-				18F7DB6A1872B01B00BEAD7D /* main.m */,
-				18F7DB6C1872B01B00BEAD7D /* 时钟动画-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -157,6 +151,60 @@
 				18F7DB861872B01B00BEAD7D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6212490F19D6AA6700DA8AAF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6212491E19D6AE1800DA8AAF /* Message */,
+				6212491019D6AA6700DA8AAF /* Main */,
+				6212491319D6AA6700DA8AAF /* Others */,
+				6212491819D6AA6700DA8AAF /* Resourse */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		6212491019D6AA6700DA8AAF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				6212491119D6AA6700DA8AAF /* ViewController.h */,
+				6212491219D6AA6700DA8AAF /* ViewController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		6212491319D6AA6700DA8AAF /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				6212491419D6AA6700DA8AAF /* AppDelegate.h */,
+				6212491519D6AA6700DA8AAF /* AppDelegate.m */,
+				6212491619D6AA6700DA8AAF /* main.m */,
+				6212491719D6AA6700DA8AAF /* 时钟动画-Prefix.pch */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		6212491819D6AA6700DA8AAF /* Resourse */ = {
+			isa = PBXGroup;
+			children = (
+				6212491919D6AA6700DA8AAF /* 雪花.png */,
+			);
+			path = Resourse;
+			sourceTree = "<group>";
+		};
+		6212491E19D6AE1800DA8AAF /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				6212491F19D6AE1800DA8AAF /* Controller */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		6212491F19D6AE1800DA8AAF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,7 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18F7DB961872B55700BEAD7D /* 雪花.png in Resources */,
+				6212491D19D6AA6700DA8AAF /* 雪花.png in Resources */,
 				18F7DB771872B01B00BEAD7D /* Images.xcassets in Resources */,
 				18F7DB691872B01B00BEAD7D /* InfoPlist.strings in Resources */,
 				18F7DB721872B01B00BEAD7D /* Main.storyboard in Resources */,
@@ -257,9 +305,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18F7DB751872B01B00BEAD7D /* ViewController.m in Sources */,
-				18F7DB6F1872B01B00BEAD7D /* AppDelegate.m in Sources */,
-				18F7DB6B1872B01B00BEAD7D /* main.m in Sources */,
+				6212491B19D6AA6700DA8AAF /* AppDelegate.m in Sources */,
+				6212491C19D6AA6700DA8AAF /* main.m in Sources */,
+				6212491A19D6AA6700DA8AAF /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,7 +433,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "时钟动画/时钟动画-Prefix.pch";
+				GCC_PREFIX_HEADER = "时钟动画/Classes/Others/时钟动画-Prefix.pch";
 				INFOPLIST_FILE = "时钟动画/时钟动画-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -398,7 +446,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "时钟动画/时钟动画-Prefix.pch";
+				GCC_PREFIX_HEADER = "时钟动画/Classes/Others/时钟动画-Prefix.pch";
 				INFOPLIST_FILE = "时钟动画/时钟动画-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
